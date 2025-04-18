@@ -1,0 +1,19 @@
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 100;
+    font-size: 28px;
+    color: #fafafa;
+    background-color: #212121;
+}
+
+.dud {
+    color: #757575;
+}

@@ -1,6 +1,7 @@
 "use client";
 import './globals.css';
 import HeroAnimation from '../../components/TextAnimation';
+import Nav from '../../components/Nav';
 import { useEffect, useState } from 'react';
 
 export default function Home() {
@@ -26,6 +27,7 @@ export default function Home() {
 
   return (
     <div>
+      <Nav />
     <section className="hero">
       <div className="glitch-effect"></div>
       <div className="hero-content">

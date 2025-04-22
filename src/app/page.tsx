@@ -2,6 +2,8 @@
 import './globals.css';
 import HeroAnimation from '../../components/TextAnimation';
 import Nav from '../../components/Nav';
+import Chat from '../../components/Chat';
+import ChatAI from '../../components/ChatAI';
 import { useEffect, useState } from 'react';
 
 export default function Home() {
@@ -26,34 +28,57 @@ export default function Home() {
   }, []);
 
   return (
-    <div>
-      <Nav />
-      <section className="hero">
-        <div className="glitch-effect"></div>
-        <div className="hero-content">
-          <h1 data-text="Hi, I'm Anass">Hi, I'm Anass</h1>
-          <h2 className="flex justify-center align-baseline">
-            I'm a{" "}
-            <span className="dynamic-text pl-2.5">
-              <span
-                className="text-wrapper transition-all duration-1000 ease-in-out"
-              >
-                {texts[currentTextIndex]}
-              </span>
-            </span>
-          </h2>
-          <p>Crafting clean, responsive, and performant web applications.</p>
-          <a href="#contact" className="cta-button">
-            Get in Touch
-          </a>
+    <div className="container mx-auto">
+      <div className="wrapper">
+        <Nav />
+        <section className="hero w-full">
+          <div className="text-center max-w-full flex justify-between">
+            <div
+              className="text-content w-4/5 relative"
+              style={{
+                backgroundImage: "url('/react-vue-background.png')", // Single background image
+                backgroundSize: "contain",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center",
+              }}
+            >
+              <h1 data-text="Hi, I'm Anass">Hi, I'm Anass</h1>
+              <h2 className="flex justify-center align-baseline">
+                I'm a{" "}
+                <span className="dynamic-text pl-2.5">
+                  <span
+                    className="text-wrapper transition-all duration-1000 ease-in-out"
+                  >
+                    {texts[currentTextIndex]}
+                  </span>
+                </span>
+              </h2>
+              <p>Crafting clean, responsive, and performant web applications.</p>
+              <a href="#contact" className="cta-button">
+                Get in Touch
+              </a>
+            </div>
+            <div className="image-content w-1/5 relative">
+              <div className="image-wrapper custom-shape rounded-full overflow-hidden border-4 border-gray-300 shadow-lg">
+                <img
+                  src="/IMG_2060_1_-removebg-preview.png"
+                  alt="Anass"
+                  className="object-cover object-center w-full h-full"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+        <div className="hero-animation">
+          <HeroAnimation phrases={phrases} />
         </div>
-      </section>
-      <div className="hero-animation">
-        <HeroAnimation phrases={phrases} />
+        <div className="chat-section mt-8">
+          <Chat />
+        </div>
+        <div className="chat-ai-section mt-8">
+          <ChatAI />  
+        </div>
       </div>
-      <div className="hero-background"></div>
-      <div className="hero-background-2"></div>
-      <div className="hero-background-3"></div>
     </div>
   );
 }

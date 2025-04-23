@@ -11,6 +11,7 @@ interface Message {
 }
 
 export default function ChatPage() {
+
   const [prompt, setPrompt] = useState<string>('');
   const [messages, setMessages] = useState<Message[]>([]); // Stores chat history
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -49,7 +50,7 @@ export default function ChatPage() {
       // Prepare history for the API call
       const apiHistory = formatHistoryForApi(messages); // Send history *before* adding the current user message
 
-      const response = await fetch('/api/gemini', {
+      const response = await fetch('/api/chat', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -59,8 +60,9 @@ export default function ChatPage() {
       });
 
       if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.error || 'API request failed');
+        const errorData = await response.text(); // Log the full response for debugging
+        console.error('API Error Response:', errorData);
+        throw new Error('API request failed');
       }
 
       const data = await response.json();

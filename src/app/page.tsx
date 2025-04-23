@@ -2,7 +2,6 @@
 import './globals.css';
 import HeroAnimation from '../../components/TextAnimation';
 import Nav from '../../components/Nav';
-import Chat from '../../components/Chat';
 import ChatAI from '../../components/ChatAI';
 import { useEffect, useState } from 'react';
 
@@ -71,9 +70,6 @@ export default function Home() {
         </section>
         <div className="hero-animation">
           <HeroAnimation phrases={phrases} />
-        </div>
-        <div className="chat-section mt-8">
-          <Chat />
         </div>
         <div className="chat-ai-section mt-8">
           <ChatAI />  

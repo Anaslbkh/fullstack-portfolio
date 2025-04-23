@@ -1,8 +1,9 @@
-// app/page.tsx
-'use client'; // Required for useState, useEffect, event handlers
+'use client';
 
 import React, { useState, FormEvent, useRef, useEffect } from 'react';
-import { Content } from "@google/generative-ai"; // Import the type
+import { Content } from "@google/generative-ai";
+import { FaUserCircle } from 'react-icons/fa';
+import { SiGooglechat } from 'react-icons/si';
 
 // Define message structure
 interface Message {
@@ -11,22 +12,18 @@ interface Message {
 }
 
 export default function ChatPage() {
-
   const [prompt, setPrompt] = useState<string>('');
-  const [messages, setMessages] = useState<Message[]>([]); // Stores chat history
+  const [messages, setMessages] = useState<Message[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
-  const messagesEndRef = useRef<HTMLDivElement>(null); // For auto-scrolling
+  const messagesEndRef = useRef<HTMLDivElement>(null);
 
-  // Function to scroll to the bottom of the chat
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
-  // Scroll to bottom whenever messages update
   useEffect(scrollToBottom, [messages]);
 
-  // --- Format history for the API ---
   const formatHistoryForApi = (history: Message[]): Content[] => {
     return history.map(msg => ({
       role: msg.role,
@@ -41,78 +38,89 @@ export default function ChatPage() {
     const newUserMessage: Message = { role: 'user', text: prompt };
     const currentMessages = [...messages, newUserMessage];
 
-    setMessages(currentMessages); // Add user message immediately
-    setPrompt(''); // Clear input
+    setMessages(currentMessages);
+    setPrompt('');
     setIsLoading(true);
     setError(null);
 
     try {
-      // Prepare history for the API call
-      const apiHistory = formatHistoryForApi(messages); // Send history *before* adding the current user message
+      const apiHistory = formatHistoryForApi(messages);
 
       const response = await fetch('/api/chat', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        // Send the new prompt and the correctly formatted history
         body: JSON.stringify({ prompt: newUserMessage.text, history: apiHistory }),
       });
 
       if (!response.ok) {
-        const errorData = await response.text(); // Log the full response for debugging
+        const errorData = await response.text();
         console.error('API Error Response:', errorData);
         throw new Error('API request failed');
       }
 
       const data = await response.json();
-
-      // Add model's response to messages
       setMessages([...currentMessages, { role: 'model', text: data.text }]);
-
     } catch (err: any) {
       console.error(err);
       setError(err.message || 'An error occurred.');
-      // Optionally remove the user message if the API call fails completely
-      // setMessages(messages);
     } finally {
       setIsLoading(false);
     }
   };
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', height: '100vh', maxWidth: '700px', margin: 'auto', padding: '20px', boxSizing: 'border-box' }}>
-      <h1>Gemini Chat</h1>
-      <div style={{ flexGrow: 1, overflowY: 'auto', border: '1px solid #ccc', marginBottom: '10px', padding: '10px' }}>
+    <div className="flex flex-col h-screen max-w-3xl mx-auto p-6 bg-gray-100">
+      <h1 className="text-2xl font-bold text-center mb-4 text-gray-800">Talk to Anass.AI</h1>
+      <div className="flex-grow overflow-y-auto bg-white shadow-md rounded-lg p-4 space-y-4">
         {messages.map((msg, index) => (
-          <div key={index} style={{ marginBottom: '10px', textAlign: msg.role === 'user' ? 'right' : 'left' }}>
-            <span style={{
-              background: msg.role === 'user' ? '#d1e7fd' : '#e2e3e5',
-              padding: '8px 12px',
-              borderRadius: '10px',
-              display: 'inline-block',
-              maxWidth: '80%'
-            }}>
-              <strong>{msg.role === 'user' ? 'You' : 'Gemini'}:</strong> {msg.text}
-            </span>
+          <div
+            key={index}
+            className={`flex items-start space-x-4 ${
+              msg.role === 'user' ? 'justify-end' : 'justify-start'
+            }`}
+          >
+            {msg.role === 'model' && (
+              <div className="flex-shrink-0">
+                <SiGooglechat className="text-blue-500 w-8 h-8" />
+              </div>
+            )}
+            {msg.role === 'user' && (
+              <div className="flex-shrink-0">
+                <FaUserCircle className="text-gray-500 w-8 h-8" />
+              </div>
+            )}
+            <div
+              className={`rounded-lg p-3 text-sm ${
+                msg.role === 'user'
+                  ? 'bg-blue-500 text-white'
+                  : 'bg-gray-200 text-gray-800'
+              }`}
+            >
+              <strong>{msg.role === 'user' ? 'You' : 'Anass.AI'}:</strong> {msg.text}
+            </div>
           </div>
         ))}
-        {/* Empty div to mark the end for scrolling */}
         <div ref={messagesEndRef} />
       </div>
 
-      {error && <p style={{ color: 'red' }}>Error: {error}</p>}
+      {error && <p className="text-red-500 mt-2 text-center">Error: {error}</p>}
 
-      <form onSubmit={handleSubmit} style={{ display: 'flex' }}>
+      <form onSubmit={handleSubmit} className="mt-4 flex space-x-2">
         <input
           type="text"
           value={prompt}
           onChange={(e) => setPrompt(e.target.value)}
           placeholder="Ask Gemini anything..."
           disabled={isLoading}
-          style={{ flexGrow: 1, padding: '10px', marginRight: '10px' }}
+          className="flex-grow p-3 border border-gray-300 text-gray-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
-        <button type="submit" disabled={isLoading} style={{ padding: '10px 15px' }}>
+        <button
+          type="submit"
+          disabled={isLoading}
+          className="bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-blue-600 disabled:opacity-50"
+        >
           {isLoading ? 'Sending...' : 'Send'}
         </button>
       </form>

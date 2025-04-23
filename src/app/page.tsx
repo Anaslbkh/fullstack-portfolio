@@ -3,6 +3,8 @@ import './globals.css';
 import HeroAnimation from '../../components/TextAnimation';
 import Nav from '../../components/Nav';
 import ChatAI from '../../components/ChatAI';
+import AboutMe from '../../components/AboutMe';
+import ExperienceProjects from '../../components/ExperienceProjects';
 import { useEffect, useState } from 'react';
 
 export default function Home() {
@@ -71,8 +73,12 @@ export default function Home() {
         <div className="hero-animation">
           <HeroAnimation phrases={phrases} />
         </div>
-        <div className="chat-ai-section mt-8">
-          <ChatAI />  
+        <div>
+          <AboutMe />
+          <ExperienceProjects />
+          <div className="chat-ai-section mt-8">
+            <ChatAI />  
+          </div>
         </div>
       </div>
     </div>

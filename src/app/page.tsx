@@ -70,12 +70,14 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <div className="hero-animation">
+        <div className="hero-animation hidden">
           <HeroAnimation phrases={phrases} />
         </div>
-        <div>
-          <AboutMe />
-          <ExperienceProjects />
+        <div className='flex'>
+          <div className="">
+            <AboutMe />
+            <ExperienceProjects />
+          </div>
           <div className="chat-ai-section mt-8">
             <ChatAI />  
           </div>
@@ -83,4 +85,4 @@ export default function Home() {
       </div>
     </div>
   );
-}
+} 

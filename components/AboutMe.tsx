@@ -1,7 +1,7 @@
 // components/AboutMe.jsx
 export default function AboutMe() {
     return (
-      <section className="max-w-4xl mx-auto px-4 py-12 text-gray-800">
+      <section className="max-w-4xl mx-auto px-4 py-12">
         <h2 className="text-4xl font-bold mb-6 text-center">👋 About Me</h2>
         <div className="space-y-6 text-lg leading-relaxed">
           <p>

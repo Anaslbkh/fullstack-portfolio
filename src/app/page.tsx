@@ -5,6 +5,7 @@ import ChatAI from '../../components/ChatAI';
 import AboutMe from '../../components/AboutMe';
 import ExperienceProjects from '../../components/ExperienceProjects';
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 export default function Home() {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
@@ -41,9 +42,9 @@ export default function Home() {
                 backgroundPosition: "center",
               }}
             >
-              <h1 data-text="Hi, I'm Anass">Hi, I'm Anass</h1>
+              <h1 data-text="Hi, I&apos;m Anass">Hi, I&apos;m Anass</h1>
               <h2 className="flex justify-center align-baseline">
-                I'm a{" "}
+                I&apos;m a{" "}
                 <span className="dynamic-text pl-2.5">
                   <span
                     className="text-wrapper transition-all duration-1000 ease-in-out"
@@ -59,10 +60,13 @@ export default function Home() {
             </div>
             <div className="image-content w-1/5 relative order-first md:order-last">
               <div className="image-wrapper custom-shape rounded-full overflow-hidden border-4 border-gray-300 shadow-lg">
-                <img
+                <Image
                   src="/IMG_2060_1_-removebg-preview.png"
                   alt="Anass"
                   className="object-cover object-center w-full h-full"
+                  width={500}
+                  height={500}
+                  priority
                 />
               </div>
             </div>

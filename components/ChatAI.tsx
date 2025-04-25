@@ -62,9 +62,9 @@ export default function ChatPage() {
 
       const data = await response.json();
       setMessages([...currentMessages, { role: 'model', text: data.text }]);
-    } catch (err: any) {
+    } catch (err: unknown) {
       console.error(err);
-      setError(err.message || 'An error occurred.');
+      setError(err instanceof Error ? err.message : 'An error occurred.');
     } finally {
       setIsLoading(false);
     }

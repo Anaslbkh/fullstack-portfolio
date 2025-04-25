@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Link from 'next/link';
 
 export default function Nav() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -27,7 +28,7 @@ export default function Nav() {
                 </button>
             </div>
             <ul className={`flex-col md:flex-row items-center md:space-x-4 space-y-2 md:space-y-0 md:flex transition-all duration-300 ease-in-out ${isMenuOpen ? "max-h-screen h-screen opacity-100 mt-4" : "max-h-0 opacity-0 md:opacity-100"}`}>
-                <li><a href="/" className="hover:text-gray-400">Home</a></li>
+                <li><Link href="/" className="hover:text-gray-400">Home</Link></li>
                 <li><a href="#about" className="hover:text-gray-400">Experience</a></li>
                 <li><a href="#services" className="hover:text-gray-400">ME</a></li>
                 <li><a href="#services" className="hover:text-gray-400">Projects</a></li>

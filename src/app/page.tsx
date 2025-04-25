@@ -1,7 +1,6 @@
 "use client";
 import './globals.css';
 import HeroAnimation from '../../components/TextAnimation';
-import Nav from '../../components/Nav';
 import ChatAI from '../../components/ChatAI';
 import AboutMe from '../../components/AboutMe';
 import ExperienceProjects from '../../components/ExperienceProjects';
@@ -31,9 +30,8 @@ export default function Home() {
   return (
     <div className="container mx-auto">
       <div className="wrapper">
-        <Nav />
         <section className="hero w-full">
-          <div className="text-center max-w-full flex justify-between">
+          <div className="text-center max-w-full flex md:flex-row flex-col justify-between">
             <div
               className="text-content w-4/5 relative"
               style={{
@@ -59,7 +57,7 @@ export default function Home() {
                 Get in Touch
               </a>
             </div>
-            <div className="image-content w-1/5 relative">
+            <div className="image-content w-1/5 relative order-first md:order-last">
               <div className="image-wrapper custom-shape rounded-full overflow-hidden border-4 border-gray-300 shadow-lg">
                 <img
                   src="/IMG_2060_1_-removebg-preview.png"
@@ -73,16 +71,16 @@ export default function Home() {
         <div className="hero-animation hidden">
           <HeroAnimation phrases={phrases} />
         </div>
-        <div className='flex'>
-          <div className="">
+        <div className="about_me_section flex flex-col md:flex-row">
+          <div className="w-full md:w-8/12 pr-4">
             <AboutMe />
             <ExperienceProjects />
           </div>
-          <div className="chat-ai-section mt-8">
-            <ChatAI />  
+          <div className="chat-ai-section w-full md:w-4/12 mt-8">
+            <ChatAI />
           </div>
         </div>
       </div>
     </div>
   );
-} 
+}

@@ -71,7 +71,7 @@ export default function ChatPage() {
   };
 
   return (
-    <div className="flex flex-col h-screen max-w-3xl mx-auto p-6 bg-gray-100">
+    <div className="flex flex-col h-screen max-w-3xl mx-auto p-6 bg-gray-100 rounded-xl">
       <h1 className="text-2xl font-bold text-center mb-4 text-gray-800">Talk to Anass.AI</h1>
       <div className="flex-grow overflow-y-auto bg-white shadow-md rounded-lg p-4 space-y-4">
         {messages.map((msg, index) => (
@@ -83,12 +83,12 @@ export default function ChatPage() {
           >
             {msg.role === 'model' && (
               <div className="flex-shrink-0">
-                <SiGooglechat className="text-blue-500 w-8 h-8" />
+                <SiGooglechat className="text-gray-800 w-8 h-8" />
               </div>
             )}
             {msg.role === 'user' && (
               <div className="flex-shrink-0">
-                <FaUserCircle className="text-gray-500 w-8 h-8" />
+                <FaUserCircle className="text-gray-800 w-8 h-8" />
               </div>
             )}
             <div

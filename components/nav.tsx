@@ -1,9 +1,12 @@
+"use client";
 import { useState } from "react";
 
 export default function Nav() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
+        <div className="bg-gray-800">
+            <div className="container mx-auto">
         <nav className="flex flex-col md:flex-row items-center justify-between p-4 bg-gray-800 text-white">
             <div className="flex items-center justify-between w-full md:w-auto md:mb-0">
                 <div className="text-lg font-bold flex-shrink-0 cursor-pointer">
@@ -32,5 +35,7 @@ export default function Nav() {
                 <li><a href="#contact" className="hover:text-gray-400">Contact</a></li>
             </ul>
         </nav>
+        </div>
+        </div>
     );
 }

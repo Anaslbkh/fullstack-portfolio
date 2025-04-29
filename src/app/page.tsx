@@ -4,8 +4,10 @@ import HeroAnimation from '../../components/TextAnimation';
 import ChatAI from '../../components/ChatAI';
 import AboutMe from '../../components/AboutMe';
 import ExperienceProjects from '../../components/ExperienceProjects';
+import Projects from '../../components/Projects';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
+import { SiVuedotjs, SiReact, SiJavascript } from 'react-icons/si';
 
 export default function Home() {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
@@ -29,21 +31,25 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="container mx-auto">
-      <div className="wrapper">
-        <section className="hero w-full">
+    <div className="container mx-auto md:px-10 animated-background">
+      <div className="wrapper ">
+        <section className="hero w-full h-[560px] relative flex justify-center items-start md:items-center pt-11 md:pt-0 overflow-hidden">
           <div className="text-center max-w-full flex md:flex-row flex-col justify-between">
+            <div className="framework-icons pb-2.5 w-10/12 md:w-1/2">
+              <SiVuedotjs className="vue-icon" />
+              <SiReact className="react-icon" />
+              <SiJavascript className="js-icon" />
+            </div>
             <div
-              className="text-content w-4/5 relative"
+              className="text-content w-screen md:w-4/5 relative"
               style={{
-                backgroundImage: "url('/react-vue-background.png')", // Single background image
-                backgroundSize: "contain",
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "center",
+                position: 'relative',
+                overflow: 'hidden',
               }}
             >
+             
               <h1 data-text="Hi, I&apos;m Anass">Hi, I&apos;m Anass</h1>
-              <h2 className="flex justify-center align-baseline">
+              <h2 className="flex justify-center align-baseline flex-wrap text-2xl md:text-3xl">
                 I&apos;m a{" "}
                 <span className="dynamic-text pl-2.5">
                   <span
@@ -53,13 +59,13 @@ export default function Home() {
                   </span>
                 </span>
               </h2>
-              <p>Crafting clean, responsive, and performant web applications.</p>
+              <p className='mb-6'>Crafting clean, responsive, and performant web applications.</p>
               <a href="#contact" className="cta-button">
                 Get in Touch
               </a>
             </div>
-            <div className="image-content w-1/5 relative order-first md:order-last">
-              <div className="image-wrapper custom-shape rounded-full overflow-hidden border-4 border-gray-300 shadow-lg">
+            <div className="image-content w-screen md:w-1/5 relative order-first md:order-last">
+              <div className="image-wrapper custom-shape rounded-full overflow-hidden border-4 border-gray-300 shadow-lg mx-auto">
                 <Image
                   src="/IMG_2060_1_-removebg-preview.png"
                   alt="Anass"
@@ -84,6 +90,7 @@ export default function Home() {
             <ChatAI />
           </div>
         </div>
+        <Projects />
       </div>
     </div>
   );

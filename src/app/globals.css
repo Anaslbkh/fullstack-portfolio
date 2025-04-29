@@ -8,8 +8,8 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-inter);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -37,14 +37,6 @@ html {
   color: #ccd6f6;
 }
 
-.hero {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  overflow: hidden;
-}
 
 .glitch-effect {
   position: absolute;
@@ -222,5 +214,110 @@ html {
 
   100% {
     transform: rotate(-2deg) scale(1);
+  }
+}
+
+.animated-background {
+  position: relative;
+  background: linear-gradient(45deg, #0a192f, #112240);
+  overflow: hidden;
+}
+
+.framework-icons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: end;
+  cursor: none;
+  opacity: 0.1;
+}
+
+.framework-icons svg {
+  width: 6rem;
+  height: 6rem;
+  animation: floatIcon 15s ease-in-out infinite;
+}
+
+@media (min-width: 768px) {
+  .framework-icons svg {
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
+.vue-icon {
+  color: #41b883;
+  animation-delay: 0s;
+}
+
+.react-icon {
+  color: #61dafb;
+  animation-delay: 5s;
+}
+
+.js-icon {
+  color: #f7df1e;
+  animation-delay: 10s;
+}
+
+@keyframes floatIcon {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  25% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+
+  50% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  75% {
+    transform: translateY(20px) rotate(-5deg);
+  }
+}
+
+.animated-background::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    /* Vue.js color */
+    linear-gradient(45deg,
+      rgba(65, 184, 131, 0.05) 0%,
+      transparent 25%,
+      /* React.js color */
+      rgba(97, 218, 251, 0.05) 50%,
+      transparent 75%,
+      /* JavaScript color */
+      rgba(247, 223, 30, 0.05) 100%);
+  animation: subtleGradientAnimation 20s ease infinite;
+  opacity: 0.1;
+}
+
+@keyframes subtleGradientAnimation {
+  0% {
+    background-position: 0% 0%;
+  }
+
+  50% {
+    background-position: 100% 0%;
+  }
+
+  100% {
+    background-position: 0% 0%;
   }
 }

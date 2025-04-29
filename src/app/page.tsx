@@ -5,6 +5,7 @@ import ChatAI from '../../components/ChatAI';
 import AboutMe from '../../components/AboutMe';
 import ExperienceProjects from '../../components/ExperienceProjects';
 import Projects from '../../components/Projects';
+import ContactForm from '../../components/ContactForm';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { SiVuedotjs, SiReact, SiJavascript } from 'react-icons/si';
@@ -31,6 +32,7 @@ export default function Home() {
   }, []);
 
   return (
+    <div>
     <div className="container mx-auto md:px-10 animated-background">
       <div className="wrapper ">
         <section className="hero w-full h-[560px] relative flex justify-center items-start md:items-center pt-11 md:pt-0 overflow-hidden">
@@ -92,6 +94,11 @@ export default function Home() {
         </div>
         <Projects />
       </div>
+      
     </div>
+  <div>
+    <ContactForm />
+  </div>
+  </div>
   );
 }

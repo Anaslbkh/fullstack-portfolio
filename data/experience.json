@@ -1,0 +1,69 @@
+{
+  "experiences": [
+    {
+      "id": "parkos",
+      "role": "Front-End Developer",
+      "company": "Parkos B.V.",
+      "location": "Remote",
+      "period": "Sep 2021 – Nov 2024",
+      "icon": "🧑‍💻",
+      "iconBgColor": "bg-blue-500",
+      "responsibilities": [
+        "Built and maintained dynamic, user-focused web apps using Vue.js, Nuxt.js, and later React.js and Next.js.",
+        "Specialized in A/B testing, rapid frontend iteration, and performance optimization.",
+        "Worked on SEO, SSR, and scalable architecture using Next.js App Router.",
+        "Integrated APIs with Node.js, Express, Firebase, and Supabase.",
+        "Collaborated with product, design, and backend teams in Agile sprints using GitLab and GitHub."
+      ],
+      "technologies": [
+        "Vue.js",
+        "Nuxt.js",
+        "React.js",
+        "Next.js",
+        "Node.js",
+        "Express",
+        "Firebase",
+        "Supabase"
+      ]
+    },
+    {
+      "id": "ocp-intern",
+      "role": "Web Development Intern",
+      "company": "OCP S.A.",
+      "location": "",
+      "period": "2020",
+      "icon": "🎓",
+      "iconBgColor": "bg-green-500",
+      "responsibilities": [
+        "Supported in development and refactoring of internal tools and systems.",
+        "Learned real-world software development practices with Git, HTML/CSS, JavaScript."
+      ],
+      "technologies": ["HTML/CSS", "JavaScript", "Git"]
+    }
+  ],
+  "currentProjects": {
+    "id": "current-projects",
+    "title": "Current Projects",
+    "period": "2020 - Present",
+    "icon": "🛠️",
+    "iconBgColor": "bg-purple-500",
+    "projects": [
+      {
+        "name": "Project Alpha",
+        "description": "A social-style feed app with auth and real-time updates.",
+        "technologies": ["Next.js", "TypeScript", "Supabase"]
+      },
+      {
+        "name": "Project Beta",
+        "description": "A modern PWA for event booking with offline-first features.",
+        "technologies": ["Nuxt 3", "Firebase"]
+      },
+      {
+        "name": "Project Gamma",
+        "description": "A customizable analytics dashboard.",
+        "technologies": ["React", "Next.js", "Zustand"]
+      }
+    ],
+    "summary": "These apps are focused on learning by doing — exploring performance, UX, API design, and building reusable components across modern stacks."
+  }
+}

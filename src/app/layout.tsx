@@ -23,7 +23,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.variable} antialiased`}>
         <Nav />
-        <main>{children}</main>
+        <main className="min-h-max mb-2.5">{children}</main>
         <Footer />
       </body>
     </html>

@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { FaGithub, FaExternalLinkAlt, FaTimes } from 'react-icons/fa';
 import Image from 'next/image';
 import styles from './Projects.module.css';
+import projectsData from '../data/projects.json';
 
 interface Project {
   title: string;
@@ -16,85 +17,12 @@ interface Project {
   features: string[];
 }
 
-const projects: Project[] = [
-    {
-      title: "Portfolio Website",
-      description: "A modern, responsive portfolio website built with Next.js and TypeScript",
-      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
-      image: "https://images.unsplash.com/photo-1642132652859-3ef5a1048fd1?q=80&w=2060&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      githubLink: "https://github.com/yourusername/portfolio",
-      liveLink: "https://yourportfolio.com",
-      features: [
-        "Responsive design",
-        "Dark/Light mode",
-        "Smooth animations",
-        "Interactive UI elements"
-      ]
-    },
-    {
-      title: "Task Manager App",
-      description: "A task management tool for organizing to-do lists and tracking progress.",
-      technologies: ["React", "TypeScript", "Redux", "Material UI"],
-      image: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&w=1350&q=80",
-      githubLink: "https://github.com/yourusername/task-manager",
-      liveLink: "https://tasky-app-demo.netlify.app",
-      features: [
-        "Drag-and-drop task cards",
-        "Due date reminders",
-        "Dark mode",
-        "Search and filter tasks"
-      ]
-    },
-    {
-      title: "E-commerce Dashboard",
-      description: "A data-rich admin dashboard for managing e-commerce analytics and inventory.",
-      technologies: ["Vue.js", "TypeScript", "Chart.js", "Tailwind CSS"],
-      image: "https://images.unsplash.com/photo-1566241440091-ec10de8db2e1?q=80&w=2032&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      githubLink: "https://github.com/yourusername/ecommerce-dashboard",
-      liveLink: "https://ecom-dashboard.netlify.app",
-      features: [
-        "Interactive charts",
-        "Product management",
-        "Sales insights",
-        "Responsive layout"
-      ]
-    },
-    {
-      title: "Weather Forecast App",
-      description: "A sleek weather app providing real-time weather updates and 7-day forecasts.",
-      technologies: ["Next.js", "Tailwind CSS", "OpenWeather API"],
-      image: "https://images.unsplash.com/photo-1501973801540-537f08ccae7e?auto=format&fit=crop&w=1350&q=80",
-      githubLink: "https://github.com/yourusername/weather-app",
-      liveLink: "https://weatherly-demo.netlify.app",
-      features: [
-        "Live weather data",
-        "Location-based search",
-        "Animated icons",
-        "Responsive design"
-      ]
-    },
-    {
-      title: "Chat App Clone",
-      description: "A real-time chat application inspired by Slack, built with Firebase.",
-      technologies: ["React", "Firebase", "Styled Components", "React Router"],
-      image: "https://plus.unsplash.com/premium_photo-1661762531725-8b08899c9634?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      githubLink: "https://github.com/yourusername/chat-app",
-      liveLink: "https://chatty-app-demo.netlify.app",
-      features: [
-        "Real-time messaging",
-        "Channel support",
-        "User authentication",
-        "Responsive UI"
-      ]
-    }
-  ];
-  
-
 const Projects = () => {
   const [showModal, setShowModal] = useState<number | null>(null);
+  const { projects } = projectsData as { projects: Project[] };
 
   return (
-    <section className="py-20 bg-gray-50 dark:bg-gray-900">
+    <section className="py-20">
       <div className="container mx-auto px-4">
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
@@ -105,7 +33,7 @@ const Projects = () => {
         </motion.h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
+          {projects.map((project: Project, index: number) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
@@ -152,7 +80,7 @@ const Projects = () => {
                 </p>
                 
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {project.technologies.map((tech, techIndex) => (
+                  {project.technologies.map((tech: string, techIndex: number) => (
                     <span 
                       key={techIndex}
                       className={`px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-100 rounded-full text-sm ${styles.techTag}`}
@@ -216,7 +144,7 @@ const Projects = () => {
                     {projects[showModal].description}
                   </p>
                   <div className="flex flex-wrap gap-2 mb-4">
-                    {projects[showModal].technologies.map((tech, index) => (
+                    {projects[showModal].technologies.map((tech: string, index: number) => (
                       <span
                         key={index}
                         className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-100 rounded-full text-sm"

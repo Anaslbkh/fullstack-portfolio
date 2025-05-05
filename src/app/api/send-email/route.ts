@@ -45,7 +45,7 @@ export async function POST(request: Request) {
       // --- FIXES APPLIED ---
       to: recipientEmail, // Use the correct recipient email from env vars
       from: `anassLebkhaiti Portfolio <onboarding@resend.dev>`, // Use your site name. Replace onboarding@resend.dev with your verified domain email for production.
-      reply_to: email, // Add the sender's email here for easy replies
+      replyTo: email, // Add the sender's email here for easy replies
       subject: `New Contact Form Submission from ${name}`,
       // Use HTML for better formatting and include all details
       html: `

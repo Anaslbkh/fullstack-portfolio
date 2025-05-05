@@ -4,7 +4,7 @@ export default function AboutMe() {
       <h2 className="text-4xl font-bold mb-6 text-center">👋 About Me</h2>
       <div className="space-y-6 text-lg leading-relaxed">
         <p>
-          Hi, I’m <strong>Anass Lebkhaiti</strong> — a passionate frontend developer from
+          Hi, I&apos;m <strong>Anass Lebkhaiti</strong> — a passionate frontend developer from
           <strong> El Jadida, Morocco</strong>, focused on crafting modern, performant web apps using
           <strong> Next.js</strong>, <strong>Vue.js</strong>, <strong>NuxtJS</strong>, and <strong>React</strong>.
         </p>
@@ -16,7 +16,7 @@ export default function AboutMe() {
 
         <p>
           My journey includes working remotely with global teams like <strong>Parkos B.V.</strong>, where I contributed
-          to production-grade applications using <strong>Vue.js</strong> and <strong>Nuxt 3</strong>. Lately, I've been
+          to production-grade applications using <strong>Vue.js</strong> and <strong>Nuxt 3</strong>. Lately, I&apos;ve been
           doubling down on <strong>Next.js</strong>, combining it with <strong>TypeScript</strong>, <strong>Firebase</strong>,
           and <strong>GraphQL</strong> to build powerful full-stack apps.
         </p>
@@ -30,12 +30,12 @@ export default function AboutMe() {
         </ul>
 
         <p>
-          Right now, I'm building <strong>Bayān</strong> (Arabic AI-enhanced prompts), <strong>ChartMind</strong> (ask & visualize),
+          Right now, I&apos;m building <strong>Bayān</strong> (Arabic AI-enhanced prompts), <strong>ChartMind</strong> (ask & visualize),
           and a new experimental app — each using a different stack to push my limits and learn by doing.
         </p>
 
         <p>
-          If you value clean code, fast execution, and thoughtful design, we’re probably on the same page. Let’s connect. 🚀
+          If you value clean code, fast execution, and thoughtful design, we&apos;re probably on the same page. Let&apos;s connect. 🚀
         </p>
       </div>
     </section>

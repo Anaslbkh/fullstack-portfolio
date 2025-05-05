@@ -12,10 +12,10 @@ export default function Hero() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentTextIndex((prevIndex) => (prevIndex + 1) % texts.length);
-    }, 3000);
+    }, 2000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [texts.length]);
 
     return(
         <section className="hero w-full h-full lg:h-[450px] relative flex justify-center items-start md:items-center pt-11 md:pt-12 pb-12 md:pb-0 overflow-hidden">

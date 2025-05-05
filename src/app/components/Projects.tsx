@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { FaGithub, FaExternalLinkAlt, FaTimes } from 'react-icons/fa';
 import Image from 'next/image';
 import styles from './Projects.module.css';
-import { projectsData } from '../../../data/projects';
+import { projectsData } from '../data/projects';
 
 interface Project {
   title: string;

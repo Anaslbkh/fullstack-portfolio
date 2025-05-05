@@ -1,7 +1,7 @@
 "use client";
 import './globals.css';
-import Hero from '../../components/Hero';
-import ChatAI from '../../components/ChatAI';
+import Hero from './components/Hero';
+import ChatAI from './components/ChatAI';
 import Link from 'next/link';
 import { HiArrowRight } from 'react-icons/hi';
 

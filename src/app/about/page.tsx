@@ -1,7 +1,7 @@
-import AboutMe from "../../../components/AboutMe"
-import ExperienceProjects from "../../../components/ExperienceProjects"
-import Projects from "../../../components/Projects"
-import ChatAI from "../../../components/ChatAI"
+import AboutMe from "../components/AboutMe"
+import ExperienceProjects from "../components/ExperienceProjects"
+import Projects from "../components/Projects"
+import ChatAI from "../components/ChatAI"
 import '../globals.css';
 
 export default function About(){

@@ -51,20 +51,20 @@ DAILY SHIPPING & LEARNING MINDSET
 • Building and deploying three apps—Bayān, ChartMind, and an experimental project—to push boundaries  
 
 KEY PROJECTS  
-• Bayān – Arabic Prompt Booster: <https://github.com/Anaslbkh/bayan>  
-• ChartMind – Ask & Visualize: <https://github.com/Anaslbkh/chartmind>  
-• Vaccination Tracker: <https://github.com/Anaslbkh/vaccination-tracker>  
-• Let's Travel: <https://github.com/Anaslbkh/lets-travel>  
-• Nous Chat: <https://github.com/Anaslbkh/nous-chat>  
-• Weather by City & Location: <https://github.com/Anaslbkh/weather-by-city-and-location>  
-• Movie App with Vue.js: <https://github.com/Anaslbkh/movie-app-vuejs>  
+• Bayān – Arabic Prompt Booster: https://github.com/Anaslbkh/bayan  
+• ChartMind – Ask & Visualize: https://github.com/Anaslbkh/chartmind  
+• Vaccination Tracker: https://github.com/Anaslbkh/vaccination-tracker  
+• Let's Travel: https://github.com/Anaslbkh/lets-travel  
+• Nous Chat: https://github.com/Anaslbkh/nous-chat  
+• Weather by City & Location: https://github.com/Anaslbkh/weather-by-city-and-location  
+• Movie App with Vue.js: https://github.com/Anaslbkh/movie-app-vuejs  
 
 ONLINE PRESENCE  
-• LinkedIn: <https://www.linkedin.com/in/anass-lebkhaiti-2446b5170/>  
-• GitHub: <https://github.com/Anaslbkh>  
-• GitLab: <https://gitlab.com/anass-lebkhaiti>  
-• Twitter / X: <https://twitter.com/AnassLebkhaiti>  
-• Portfolio: <https://www.luznuevaworld.com/>  
+• LinkedIn: https://www.linkedin.com/in/anass-lebkhaiti-2446b5170/  
+• GitHub: https://github.com/Anaslbkh  
+• GitLab: https://gitlab.com/Anaslbkh 
+• Twitter / X: https://twitter.com/ALebkhaiti  
+• Portfolio: this One :) 
 
 LETTER OF RECOMMENDATION  
 • From Parkos B.V. praising frontend work, A/B testing skills, and Agile collaboration.  
@@ -178,7 +178,6 @@ export async function POST(req: Request) {
         "Check the structure of the prompt or history. Details: " +
         errorDetails;
     }
-    // Add more specific checks if needed based on errors you encounter
 
     return NextResponse.json(
       { error: errorMessage, details: errorDetails },

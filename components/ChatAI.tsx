@@ -22,7 +22,7 @@ const formatMessageWithLinks = (text: string) => {
           href={part}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-400 hover:text-blue-300 underline"
+          className="text-blue-400 hover:text-blue-300 underline break-all"
         >
           {part}
         </a>
@@ -31,6 +31,15 @@ const formatMessageWithLinks = (text: string) => {
     return part;
   });
 };
+
+// Loading dots animation component
+const LoadingDots = () => (
+  <div className="flex space-x-1">
+    <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></div>
+    <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></div>
+    <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></div>
+  </div>
+);
 
 export default function ChatAI() {
   const [prompt, setPrompt] = useState<string>('Tell me about Anass Lebkhaiti and his work experience');
@@ -60,7 +69,7 @@ export default function ChatAI() {
     const currentMessages = [...messages, newUserMessage];
 
     setMessages(currentMessages);
-    setPrompt('Tell me about Anass Lebkhaiti and his work experience');
+    setPrompt('');
     setIsLoading(true);
     setError(null);
 
@@ -114,7 +123,7 @@ export default function ChatAI() {
                 <SiGooglechat className="w-6 h-6 text-gray-200 flex-shrink-0" />
               )}
               <div
-                className={`max-w-[80%] rounded-lg px-4 py-2 text-sm ${
+                className={`max-w-[80%] rounded-lg px-4 py-2 text-sm break-words ${
                   msg.role === 'user'
                     ? 'bg-blue-500 text-white'
                     : 'bg-gray-50 text-gray-800'
@@ -127,6 +136,14 @@ export default function ChatAI() {
               )}
             </div>
           ))
+        )}
+        {isLoading && (
+          <div className="flex items-start gap-3">
+            <SiGooglechat className="w-6 h-6 text-gray-200 flex-shrink-0" />
+            <div className="max-w-[80%] rounded-lg px-4 py-2 text-sm bg-gray-50 text-gray-800">
+              <LoadingDots />
+            </div>
+          </div>
         )}
         <div ref={messagesEndRef} />
       </div>

@@ -63,14 +63,14 @@ export default function TextScramble({ phrases }: { phrases: string[] }) {
         let complete = 0;
         
         for (let i = 0, n = this.queue.length; i < n; i++) {
-          let { from, to, start, end, char } = this.queue[i];
+          const { from, to, start, end, char } = this.queue[i];
           if (this.frame >= end) {
             complete++;
             output += to;
           } else if (this.frame >= start) {
             if (!char || Math.random() < 0.50) {
-              char = this.randomChar();
-              this.queue[i].char = char;
+              const newChar = this.randomChar();
+              this.queue[i].char = newChar;
             }
             output += `<span class="${styles.dud}">${char}</span>`;
           } else {

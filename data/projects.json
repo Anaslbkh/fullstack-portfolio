@@ -1,83 +1,110 @@
 {
   "projects": [
     {
-      "title": "Portfolio Website",
-      "description": "A modern, responsive portfolio website built with Next.js and TypeScript",
+      "title": "Vaccination Tracker",
+      "description": "A Vue.js application designed to track vaccination records and schedules.",
+      "technologies": ["Vue.js", "JavaScript", "HTML", "CSS"],
+      "image": "/vaccineTracker.png",
+      "githubLink": "https://github.com/Anaslbkh/vaccination-tracker",
+      "liveLink": "",
+      "features": [
+        "User-friendly interface for tracking vaccinations",
+        "Responsive design for mobile and desktop",
+        "Data visualization for vaccination statistics"
+      ]
+    },
+    {
+      "title": "Let's Travel",
+      "description": "A static travel website showcasing various destinations and travel packages.",
+      "technologies": ["HTML", "CSS", "JavaScript"],
+      "image": "/letstravel.png",
+      "githubLink": "https://github.com/Anaslbkh/lets-travel",
+      "liveLink": "",
+      "features": [
+        "Attractive layout with images and descriptions",
+        "Responsive design for various devices",
+        "Interactive elements for user engagement"
+      ]
+    },
+    {
+      "title": "Nous Chat",
+      "description": "A real-time chat application built using Vue.js and Firebase.",
+      "technologies": ["Vue.js", "Firebase", "JavaScript", "HTML", "CSS"],
+      "image": "/nous-chat.png",
+      "githubLink": "https://github.com/Anaslbkh/nous-chat",
+      "liveLink": "",
+      "features": [
+        "Real-time messaging with Firebase",
+        "User authentication and chat rooms",
+        "Responsive and clean UI"
+      ]
+    },
+    {
+      "title": "Weather by City and Location",
+      "description": "A weather application that provides current weather information based on city or user's location.",
+      "technologies": ["JavaScript", "HTML", "CSS", "OpenWeatherMap API"],
+      "image": "/app-weather.png",
+      "githubLink": "https://github.com/Anaslbkh/weather-by-city-and-location",
+      "liveLink": "",
+      "features": [
+        "Fetches weather data using OpenWeatherMap API",
+        "Allows search by city or geolocation",
+        "Displays temperature, humidity, and weather conditions"
+      ]
+    },
+    {
+      "title": "Movie App with Vue.js",
+      "description": "A movie browsing application built with Vue.js, allowing users to search and view movie details.",
       "technologies": [
-        "Next.js",
-        "TypeScript",
-        "Tailwind CSS",
-        "Framer Motion"
+        "Vue.js",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "The Movie Database API"
       ],
-      "image": "https://images.unsplash.com/photo-1642132652859-3ef5a1048fd1?q=80&w=2060&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "githubLink": "https://github.com/yourusername/portfolio",
-      "liveLink": "https://yourportfolio.com",
+      "image": "/movie-app.png",
+      "githubLink": "https://github.com/Anaslbkh/movie-app-vuejs",
+      "liveLink": "",
       "features": [
-        "Responsive design",
-        "Dark/Light mode",
-        "Smooth animations",
-        "Interactive UI elements"
+        "Search functionality for movies",
+        "Displays movie details and posters",
+        "Responsive design for various devices"
+      ]
+    }
+  ],
+  "workingOn": [
+    {
+      "title": "Bayān – Arabic Prompt Booster",
+      "description": "A Next.js app that helps Arabic speakers get richer ChatGPT answers by translating and optimizing their questions into powerful English prompts, then returning high-quality Arabic responses.",
+      "technologies": ["Next.js", "React", "Tailwind CSS", "OpenAI API"],
+      "image": "/bayan.jpeg",
+      "githubLink": "https://github.com/Anaslbkh/bayan",
+      "liveLink": "",
+      "features": [
+        "Arabic-to-English prompt optimization with contextual enhancement",
+        "Delivers answers in fluent Arabic using OpenAI’s GPT",
+        "Clean, responsive UI with loading and error handling",
+        "Ideal for non-English speakers seeking high-quality AI results"
       ]
     },
     {
-      "title": "Task Manager App",
-      "description": "A task management tool for organizing to-do lists and tracking progress.",
-      "technologies": ["React", "TypeScript", "Redux", "Material UI"],
-      "image": "https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&w=1350&q=80",
-      "githubLink": "https://github.com/yourusername/task-manager",
-      "liveLink": "https://tasky-app-demo.netlify.app",
-      "features": [
-        "Drag-and-drop task cards",
-        "Due date reminders",
-        "Dark mode",
-        "Search and filter tasks"
-      ]
-    },
-    {
-      "title": "E-commerce Dashboard",
-      "description": "A data-rich admin dashboard for managing e-commerce analytics and inventory.",
-      "technologies": ["Vue.js", "TypeScript", "Chart.js", "Tailwind CSS"],
-      "image": "https://images.unsplash.com/photo-1566241440091-ec10de8db2e1?q=80&w=2032&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "githubLink": "https://github.com/yourusername/ecommerce-dashboard",
-      "liveLink": "https://ecom-dashboard.netlify.app",
-      "features": [
-        "Interactive charts",
-        "Product management",
-        "Sales insights",
-        "Responsive layout"
-      ]
-    },
-    {
-      "title": "Weather Forecast App",
-      "description": "A sleek weather app providing real-time weather updates and 7-day forecasts.",
-      "technologies": ["Next.js", "Tailwind CSS", "OpenWeather API"],
-      "image": "https://images.unsplash.com/photo-1501973801540-537f08ccae7e?auto=format&fit=crop&w=1350&q=80",
-      "githubLink": "https://github.com/yourusername/weather-app",
-      "liveLink": "https://weatherly-demo.netlify.app",
-      "features": [
-        "Live weather data",
-        "Location-based search",
-        "Animated icons",
-        "Responsive design"
-      ]
-    },
-    {
-      "title": "Chat App Clone",
-      "description": "A real-time chat application inspired by Slack, built with Firebase.",
+      "title": "ChartMind – Ask & Visualize",
+      "description": "A Nuxt 3 web app that turns natural language questions into beautiful, AI-generated charts using GPT and Chart.js.",
       "technologies": [
-        "React",
-        "Firebase",
-        "Styled Components",
-        "React Router"
+        "Nuxt.js 3",
+        "Vue",
+        "Chart.js",
+        "OpenAI API",
+        "Tailwind CSS"
       ],
-      "image": "https://plus.unsplash.com/premium_photo-1661762531725-8b08899c9634?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "githubLink": "https://github.com/yourusername/chat-app",
-      "liveLink": "https://chatty-app-demo.netlify.app",
+      "image": "/chartMind.jpeg",
+      "githubLink": "https://github.com/Anaslbkh/chartmind",
+      "liveLink": "",
       "features": [
-        "Real-time messaging",
-        "Channel support",
-        "User authentication",
-        "Responsive UI"
+        "Transforms user questions into chart-ready data using GPT",
+        "Returns structured JSON to render charts automatically",
+        "Supports pie, bar, line, donut, and radar charts",
+        "Responsive, modern UI built with Tailwind CSS and Nuxt 3"
       ]
     }
   ]

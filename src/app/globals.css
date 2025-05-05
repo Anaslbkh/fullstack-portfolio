@@ -219,7 +219,7 @@ html {
 
 .animated-background {
   position: relative;
-  background: linear-gradient(45deg, #0a192f, #112240);
+  background: inherit;
   overflow: hidden;
 }
 

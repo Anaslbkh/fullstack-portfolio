@@ -11,8 +11,29 @@ interface Message {
   text: string;
 }
 
+// Function to convert text with URLs to clickable links
+const formatMessageWithLinks = (text: string) => {
+  const urlRegex = /(https?:\/\/[^\s]+)/g;
+  return text.split(urlRegex).map((part, index) => {
+    if (part.match(urlRegex)) {
+      return (
+        <a
+          key={index}
+          href={part}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-400 hover:text-blue-300 underline"
+        >
+          {part}
+        </a>
+      );
+    }
+    return part;
+  });
+};
+
 export default function ChatAI() {
-  const [prompt, setPrompt] = useState<string>('');
+  const [prompt, setPrompt] = useState<string>('Tell me about Anass Lebkhaiti and his work experience');
   const [messages, setMessages] = useState<Message[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
@@ -39,7 +60,7 @@ export default function ChatAI() {
     const currentMessages = [...messages, newUserMessage];
 
     setMessages(currentMessages);
-    setPrompt('');
+    setPrompt('Tell me about Anass Lebkhaiti and his work experience');
     setIsLoading(true);
     setError(null);
 
@@ -99,7 +120,7 @@ export default function ChatAI() {
                     : 'bg-gray-50 text-gray-800'
                 }`}
               >
-                {msg.text}
+                {msg.role === 'model' ? formatMessageWithLinks(msg.text) : msg.text}
               </div>
               {msg.role === 'user' && (
                 <FaUserCircle className="w-6 h-6 text-gray-400 flex-shrink-0" />

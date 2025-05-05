@@ -12,7 +12,7 @@ export default function About(){
             <AboutMe />
             <ExperienceProjects />
           </div>
-          <div className="chat-ai-section w-full md:w-4/12 mt-8 px-4">
+          <div className="chat-ai-section w-full md:w-4/12 mt-8 px-4 z-50">
             <ChatAI />
           </div>
         </div>

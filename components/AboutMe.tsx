@@ -1,46 +1,43 @@
-// components/AboutMe.jsx
 export default function AboutMe() {
-    return (
-      <section className="max-w-4xl mx-auto px-4 py-12">
-        <h2 className="text-4xl font-bold mb-6 text-center">👋 About Me</h2>
-        <div className="space-y-6 text-lg leading-relaxed">
-          <p>
-            Hey, I’m <strong>Anass Lebkhaiti</strong> — a frontend developer based in{' '}
-            <strong>El Jadida, Morocco</strong>, crafting sleek, scalable web experiences
-            with <strong>Next.js</strong>, <strong>Nuxt.js</strong>, and <strong>React</strong>.
-          </p>
-  
-          <p>
-            I’m not just someone who builds UI. I <strong>ship something every single day</strong> —
-            from experiments and prototypes to real features in real projects. It’s my way of staying
-            sharp, learning fast, and delivering value with every line of code.
-          </p>
-  
-          <p>
-            Over the past few years, I’ve worked remotely for international teams (like{' '}
-            <strong>Parkos B.V.</strong>), building production-grade apps using{' '}
-            <strong>Vue.js</strong>, <strong>Nuxt 3</strong>, and increasingly,{' '}
-            <strong>Next.js</strong> — where I now focus deeply.
-          </p>
-  
-          <ul className="list-disc pl-6 space-y-1">
-            <li>⚡️ Fast, SEO-friendly pages with <strong>Next.js App Router</strong></li>
-            <li>🔁 State management using <strong>Context API</strong>, <strong>Zustand</strong>, and hooks</li>
-            <li>🧩 Modular, reusable components with <strong>TypeScript</strong> and <strong>Tailwind CSS</strong></li>
-            <li>🚀 Optimized performance via dynamic imports, image optimization, and SSR</li>
-            <li>🧪 A/B testing, measuring, and iterating</li>
-          </ul>
-  
-          <p>
-            Right now, I’m working on <strong>three new web apps</strong> you’ll hear about soon — each
-            built with a different stack (Next.js, Nuxt 3, and React) to push boundaries and learn by doing.
-          </p>
-  
-          <p>
-            If you’re into clean code, fast shipping, and good vibes, we’ll probably get along. 😉
-          </p>
-        </div>
-      </section>
-    );
-  }
-  
+  return (
+    <section className="max-w-4xl mx-auto px-4 py-12">
+      <h2 className="text-4xl font-bold mb-6 text-center">👋 About Me</h2>
+      <div className="space-y-6 text-lg leading-relaxed">
+        <p>
+          Hi, I’m <strong>Anass Lebkhaiti</strong> — a passionate frontend developer from
+          <strong> El Jadida, Morocco</strong>, focused on crafting modern, performant web apps using
+          <strong> Next.js</strong>, <strong>Vue.js</strong>, <strong>NuxtJS</strong>, and <strong>React</strong>.
+        </p>
+
+        <p>
+          I thrive on building — I <strong>ship projects daily</strong> to stay sharp, explore new tools, and solve real
+          problems. From sleek UI components to full-stack features, I turn ideas into web experiences that scale.
+        </p>
+
+        <p>
+          My journey includes working remotely with global teams like <strong>Parkos B.V.</strong>, where I contributed
+          to production-grade applications using <strong>Vue.js</strong> and <strong>Nuxt 3</strong>. Lately, I've been
+          doubling down on <strong>Next.js</strong>, combining it with <strong>TypeScript</strong>, <strong>Firebase</strong>,
+          and <strong>GraphQL</strong> to build powerful full-stack apps.
+        </p>
+
+        <ul className="list-disc pl-6 space-y-1">
+          <li>⚡ Fast, SEO-optimized apps with the <strong>Next.js App Router</strong></li>
+          <li>🔁 Scalable state with <strong>Context API</strong>, <strong>Zustand</strong>, and custom hooks</li>
+          <li>🧩 Clean, reusable components powered by <strong>TypeScript</strong> and <strong>Tailwind CSS</strong></li>
+          <li>🚀 Performance-first approach: SSR, lazy loading, caching, and image optimization</li>
+          <li>📊 Data flow with <strong>GraphQL</strong>, <strong>Firebase</strong>, and <strong>Supabase</strong></li>
+        </ul>
+
+        <p>
+          Right now, I'm building <strong>Bayān</strong> (Arabic AI-enhanced prompts), <strong>ChartMind</strong> (ask & visualize),
+          and a new experimental app — each using a different stack to push my limits and learn by doing.
+        </p>
+
+        <p>
+          If you value clean code, fast execution, and thoughtful design, we’re probably on the same page. Let’s connect. 🚀
+        </p>
+      </div>
+    </section>
+  );
+}

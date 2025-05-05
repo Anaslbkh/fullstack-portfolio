@@ -9,11 +9,11 @@
       "icon": "🧑‍💻",
       "iconBgColor": "bg-blue-500",
       "responsibilities": [
-        "Built and maintained dynamic, user-focused web apps using Vue.js, Nuxt.js, and later React.js and Next.js.",
-        "Specialized in A/B testing, rapid frontend iteration, and performance optimization.",
-        "Worked on SEO, SSR, and scalable architecture using Next.js App Router.",
-        "Integrated APIs with Node.js, Express, Firebase, and Supabase.",
-        "Collaborated with product, design, and backend teams in Agile sprints using GitLab and GitHub."
+        "Developed and maintained production-grade web apps using Vue.js, Nuxt.js, and later transitioned to React.js and Next.js.",
+        "Led frontend experiments through A/B testing and rapid iteration cycles to improve conversion and UX.",
+        "Implemented SEO, SSR, and scalable routing using the Next.js App Router.",
+        "Built full-stack features by integrating APIs with Node.js, Express, Firebase, and Supabase.",
+        "Collaborated closely with cross-functional teams in Agile sprints using GitLab and GitHub."
       ],
       "technologies": [
         "Vue.js",
@@ -35,8 +35,8 @@
       "icon": "🎓",
       "iconBgColor": "bg-green-500",
       "responsibilities": [
-        "Supported in development and refactoring of internal tools and systems.",
-        "Learned real-world software development practices with Git, HTML/CSS, JavaScript."
+        "Assisted in refactoring and maintaining internal web tools for operational workflows.",
+        "Gained hands-on experience with Git, JavaScript, and responsive frontend development."
       ],
       "technologies": ["HTML/CSS", "JavaScript", "Git"]
     }
@@ -49,21 +49,21 @@
     "iconBgColor": "bg-purple-500",
     "projects": [
       {
-        "name": "Project Alpha",
-        "description": "A social-style feed app with auth and real-time updates.",
-        "technologies": ["Next.js", "TypeScript", "Supabase"]
+        "name": "Bayān",
+        "description": "An AI-powered Arabic prompts tool to explore, test, and refine prompt engineering ideas across tasks.",
+        "technologies": ["Next.js", "TypeScript", "Firebase"]
       },
       {
-        "name": "Project Beta",
-        "description": "A modern PWA for event booking with offline-first features.",
-        "technologies": ["Nuxt 3", "Firebase"]
-      },
-      {
-        "name": "Project Gamma",
-        "description": "A customizable analytics dashboard.",
+        "name": "ChartMind",
+        "description": "A tool that lets users ask questions and instantly visualize answers as charts using AI and dynamic APIs.",
         "technologies": ["React", "Next.js", "Zustand"]
+      },
+      {
+        "name": "Experimental App",
+        "description": "An in-progress app exploring server actions, streaming, and RSC to push the limits of the Next.js App Router.",
+        "technologies": ["Next.js", "TypeScript", "App Router"]
       }
     ],
-    "summary": "These apps are focused on learning by doing — exploring performance, UX, API design, and building reusable components across modern stacks."
+    "summary": "Each project reflects my commitment to hands-on learning — focused on performance, UX, full-stack architecture, and reusable components using modern web technologies."
   }
 }

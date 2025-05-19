@@ -16,6 +16,21 @@ interface ProjectsData {
 export const projectsData: ProjectsData = {
   projects: [
     {
+      title: "TaskTastic Kids",
+      description:
+        "A modern task management application designed to help children organize and track their daily activities with an engaging and intuitive interface.",
+      technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+      image: "/TaskTastic Kids.png",
+      githubLink: "https://github.com/Anaslbkh/tasktastic-kids",
+      liveLink: "",
+      features: [
+        "Interactive task management with step-by-step guidance",
+        "Modern UI with toast notifications for feedback",
+        "Responsive card-based interface for easy task tracking",
+        "Clean and intuitive user experience",
+      ],
+    },
+    {
       title: "Vaccination Tracker",
       description:
         "A Vue.js application designed to track vaccination records and schedules.",

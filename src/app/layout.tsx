@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Footer from "@/app/components/Footer";
 import Nav from "@/app/components/Nav";
+import FloatingSocialBar from "@/app/components/FloatingSocialBar";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -25,6 +26,7 @@ export default function RootLayout({
         <Nav />
         <main className="min-h-max mb-2.5">{children}</main>
         <Footer />
+        <FloatingSocialBar />
       </body>
     </html>
   );

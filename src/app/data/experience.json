@@ -9,28 +9,46 @@
       "icon": "🧑‍💻",
       "iconBgColor": "bg-blue-500",
       "responsibilities": [
-        "Developed and maintained production-grade web apps using Vue.js, Nuxt.js, and later transitioned to React.js and Next.js.",
+        "Developed and maintained production-grade web apps using Vue.js, Nuxt.js, Node.js, MySQL, Jquery.",
         "Led frontend experiments through A/B testing and rapid iteration cycles to improve conversion and UX.",
-        "Implemented SEO, SSR, and scalable routing using the Next.js App Router.",
-        "Built full-stack features by integrating APIs with Node.js, Express, Firebase, and Supabase.",
+        "Optimized Core Web Vitals (LCP, CLS, FID) and implemented SEO/SSR strategies for improved performance and rankings.",
+        "Built full-stack features by integrating APIs with Node.js, Express.",
         "Collaborated closely with cross-functional teams in Agile sprints using GitLab and GitHub."
       ],
       "technologies": [
         "Vue.js",
         "Nuxt.js",
-        "React.js",
-        "Next.js",
+        "JavaScript",
+        "TypeScript",
+        "HTML/CSS",
+        "Tailwind CSS",
+        "bootstrap",
+        "SCSS",
+        "MySQL",
+        "jQuery",
+        "Git",
+        "GitHub",
+        "GitLab",
+        "Jira",
+        "Agile/Scrum",
+        "A/B Testing",
+        "SEO",
+        "CRO",
+        "Core Web Vitals",
+        "Restful APIs",
         "Node.js",
         "Express",
-        "Firebase",
-        "Supabase"
+        "Headless CMS",
+        "Postman",
+        "Trello",
+        "Slack"
       ]
     },
     {
       "id": "ocp-intern",
       "role": "Web Development Intern",
       "company": "OCP S.A.",
-      "location": "",
+      "location": "Morocco",
       "period": "2020",
       "icon": "🎓",
       "iconBgColor": "bg-green-500",
@@ -38,7 +56,7 @@
         "Assisted in refactoring and maintaining internal web tools for operational workflows.",
         "Gained hands-on experience with Git, JavaScript, and responsive frontend development."
       ],
-      "technologies": ["HTML/CSS", "JavaScript", "Git"]
+      "technologies": ["HTML/CSS", "JavaScript", "Node.js", "MongoDB", "Git"]
     }
   ],
   "currentProjects": {
@@ -49,12 +67,63 @@
     "iconBgColor": "bg-purple-500",
     "projects": [
       {
-        "name": "Bayān",
+        "name": "Tahaqaaq",
+        "description": "An AI-powered mobile app (IOS - Android) for Hadith authenticity verification. Features OCR, NLP for Arabic, speech-to-text, Firebase auth, and subscription monetization via RevenueCat.",
+        "technologies": [
+          "React Native",
+          "Expo",
+          "TypeScript",
+          "Flask/FastAPI",
+          "Google Cloud Platform",
+          "Firebase",
+          "RevenueCat",
+          "AI/NLP"
+        ]
+      },
+      {
+        "name": "Tahaqaaq KSA (Coming Soon)",
+        "description": "An AI-powered mobile app (IOS - Android) for Saudi Arabia News verification to help stop the fake news about the kingdom in social media. Features OCR, NLP for Arabic, speech-to-text, Firebase auth, and subscription monetization via RevenueCat.",
+        "technologies": [
+          "React Native",
+          "Expo",
+          "TypeScript",
+          "Flask/FastAPI",
+          "Google Cloud Platform",
+          "Firebase",
+          "RevenueCat",
+          "AI/NLP"
+        ]
+      },
+      {
+        "name": "Retro",
+        "description": "A modern web app leveraging Gemini Nano and Banana API for AI workflows. Built with scalable state management and query handling for real-time data.",
+        "technologies": [
+          "Next.js",
+          "Gemini Nano Banana API",
+          "Zustand",
+          "TanStack Query",
+          "Tailwind CSS"
+        ]
+      },
+      {
+        "name": "TaskTastic Kids",
+        "description": "A gamified productivity app for children featuring daily quests, progress tracking, and AI-generated magical hero rewards.",
+        "technologies": [
+          "Next.js",
+          "React",
+          "TypeScript",
+          "Tailwind CSS",
+          "Firebase",
+          "GEmini API"
+        ]
+      },
+      {
+        "name": "Bayān (Coming Soon)",
         "description": "An AI-powered Arabic prompts tool to explore, test, and refine prompt engineering ideas across tasks.",
         "technologies": ["Next.js", "TypeScript", "Firebase"]
       },
       {
-        "name": "ChartMind",
+        "name": "ChartMind (Coming Soon)",
         "description": "A tool that lets users ask questions and instantly visualize answers as charts using AI and dynamic APIs.",
         "technologies": ["React", "Next.js", "Zustand"]
       },
@@ -64,6 +133,6 @@
         "technologies": ["Next.js", "TypeScript", "App Router"]
       }
     ],
-    "summary": "Each project reflects my commitment to hands-on learning — focused on performance, UX, full-stack architecture, and reusable components using modern web technologies."
+    "summary": "My projects showcase my journey from mastering modern frontend frameworks (React, Next.js, Vue, Nuxt, React Native, Expo) to delivering AI-integrated mobile and web applications powered by NLP, OCR, speech recognition, and APIs like Gemini Nano, Banana API, and OpenAI. I combine strong frontend engineering with backend and cloud expertise (Flask/FastAPI, Node.js, Firebase, Supabase, Google Cloud) to build secure, scalable, and high-performance solutions. With proven skills in Core Web Vitals optimization, CRO, SEO, state management (Zustand, TanStack Query, Vuex, Pinia), and testing, I focus on creating user-centric experiences and architectures that deliver measurable real-world impact."
   }
 }

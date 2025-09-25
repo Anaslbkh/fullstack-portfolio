@@ -16,20 +16,52 @@ interface ProjectsData {
 export const projectsData: ProjectsData = {
   projects: [
     {
-      title: "TaskTastic Kids",
+      title: "Tahaqaaq",
       description:
-        "A modern task management application designed to help children organize and track their daily activities with an engaging and intuitive interface.",
-      technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
-      image: "/TaskTastic Kids.png",
-      githubLink: "https://github.com/Anaslbkh/tasktastic-kids",
-      liveLink: "",
+        "An AI-powered mobile app for Hadith authenticity verification with OCR, NLP for Arabic, speech-to-text, Firebase authentication, and subscription monetization via RevenueCat.",
+      technologies: [
+        "React Native",
+        "Expo",
+        "TypeScript",
+        "Flask/FastAPI",
+        "Google Cloud Platform",
+        "Firebase",
+        "RevenueCat",
+        "AI/NLP",
+      ],
+      image: "/tahaqaaq.png",
+      githubLink: "github.com/Anaslbkh/tahaqaaq",
+      liveLink: "tahaqaaq.com",
       features: [
-        "Interactive task management with step-by-step guidance",
-        "Modern UI with toast notifications for feedback",
-        "Responsive card-based interface for easy task tracking",
-        "Clean and intuitive user experience",
+        "AI-powered Hadith authenticity verification",
+        "OCR and NLP for Arabic text analysis",
+        "Voice search with speech-to-text",
+        "Multi-language support with RTL handling",
       ],
     },
+    {
+      title: "TaskTastic Kids",
+      description:
+        "A gamified productivity app for children featuring daily quests, progress tracking, and AI-generated magical hero rewards.",
+      technologies: [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "firebase",
+        "Gemini API",
+      ],
+      image: "/TaskTastic Kids.png",
+      githubLink: "https://github.com/Anaslbkh/tasktastic-kids",
+      liveLink: "tasktastic-kids.vercel.app/",
+      features: [
+        "Interactive daily quests and progress tracking",
+        "AI-generated magical hero rewards",
+        "Modern, responsive UI built with Tailwind",
+        "Kid-friendly design and usability focus",
+      ],
+    },
+
     {
       title: "Vaccination Tracker",
       description:
@@ -39,9 +71,9 @@ export const projectsData: ProjectsData = {
       githubLink: "https://github.com/Anaslbkh/vaccination-tracker",
       liveLink: "",
       features: [
-        "User-friendly interface for tracking vaccinations",
+        "Track vaccination records and schedules",
         "Responsive design for mobile and desktop",
-        "Data visualization for vaccination statistics",
+        "Data visualization for vaccination stats",
       ],
     },
     {
@@ -53,9 +85,9 @@ export const projectsData: ProjectsData = {
       githubLink: "https://github.com/Anaslbkh/lets-travel",
       liveLink: "",
       features: [
-        "Attractive layout with images and descriptions",
-        "Responsive design for various devices",
-        "Interactive elements for user engagement",
+        "Attractive travel layouts and galleries",
+        "Responsive design across devices",
+        "Interactive elements for engagement",
       ],
     },
     {
@@ -68,7 +100,7 @@ export const projectsData: ProjectsData = {
       liveLink: "",
       features: [
         "Real-time messaging with Firebase",
-        "User authentication and chat rooms",
+        "Authentication and multi-user chat rooms",
         "Responsive and clean UI",
       ],
     },
@@ -81,9 +113,9 @@ export const projectsData: ProjectsData = {
       githubLink: "https://github.com/Anaslbkh/weather-by-city-and-location",
       liveLink: "",
       features: [
-        "Fetches weather data using OpenWeatherMap API",
-        "Allows search by city or geolocation",
-        "Displays temperature, humidity, and weather conditions",
+        "Fetches weather data via OpenWeatherMap API",
+        "Search by city or geolocation",
+        "Displays temperature, humidity, and conditions",
       ],
     },
     {
@@ -103,30 +135,75 @@ export const projectsData: ProjectsData = {
       features: [
         "Search functionality for movies",
         "Displays movie details and posters",
-        "Responsive design for various devices",
+        "Responsive design across devices",
       ],
     },
   ],
   workingOn: [
     {
+      title: "Retro",
+      description:
+        "A modern web app leveraging Gemini Nano and Banana API for AI workflows. Built with scalable state management and query handling for real-time data.",
+      technologies: [
+        "Next.js",
+        "Gemini Nano Banana API",
+        "Zustand",
+        "TanStack Query",
+        "Tailwind CSS",
+      ],
+      image: "/retro.png",
+      githubLink: "github.com/Anaslbkh/retro",
+      liveLink: "retro-anaslbkh.vercel.app",
+      features: [
+        "AI workflows powered by Gemini Nano and Banana API",
+        "State management with Zustand",
+        "Data fetching with TanStack Query",
+        "Modern Tailwind UI",
+      ],
+    },
+    {
+      title: "Tahaqaaq KSA",
+      description:
+        "A localized version of Tahaqaaq for the Saudi Arabian News. Same stack as Tahaqaaq, with extra localization, scalability, and cultural adaptations.",
+      technologies: [
+        "React Native",
+        "Expo",
+        "TypeScript",
+        "Flask/FastAPI",
+        "Google Cloud Platform",
+        "Firebase",
+        "RevenueCat",
+        "AI/NLP",
+      ],
+      image: "/tahaqaaq-ksa.png",
+      githubLink: "github.com/Anaslbkh/tahaqaaq-ksa",
+      liveLink: "ksa.tahaqaaq.com",
+      features: [
+        "Localized version of Tahaqaaq for Saudi users",
+        "Same AI/NLP-based Hadith verification system",
+        "Full RTL and Arabic support",
+        "Cloud deployment with GCP for scalability",
+      ],
+    },
+    {
       title: "Bayān – Arabic Prompt Booster",
       description:
-        "A Next.js app that helps Arabic speakers get richer ChatGPT answers by translating and optimizing their questions into powerful English prompts, then returning high-quality Arabic responses.",
+        "A Next.js app that helps Arabic speakers get richer ChatGPT answers by optimizing their questions into powerful English prompts, then returning high-quality Arabic responses.",
       technologies: ["Next.js", "React", "Tailwind CSS", "OpenAI API"],
       image: "/bayan.jpeg",
       githubLink: "https://github.com/Anaslbkh/bayan",
       liveLink: "",
       features: [
-        "Arabic-to-English prompt optimization with contextual enhancement",
-        "Delivers answers in fluent Arabic using OpenAI's GPT",
-        "Clean, responsive UI with loading and error handling",
-        "Ideal for non-English speakers seeking high-quality AI results",
+        "Arabic-to-English prompt optimization",
+        "Returns fluent Arabic answers with GPT",
+        "Clean responsive UI with error handling",
+        "Designed for non-English speakers",
       ],
     },
     {
       title: "ChartMind – Ask & Visualize",
       description:
-        "A Nuxt 3 web app that turns natural language questions into beautiful, AI-generated charts using GPT and Chart.js.",
+        "A Nuxt 3 web app that turns natural language questions into AI-generated charts using GPT and Chart.js.",
       technologies: [
         "Nuxt.js 3",
         "Vue",
@@ -138,10 +215,10 @@ export const projectsData: ProjectsData = {
       githubLink: "https://github.com/Anaslbkh/chartmind",
       liveLink: "",
       features: [
-        "Transforms user questions into chart-ready data using GPT",
-        "Returns structured JSON to render charts automatically",
-        "Supports pie, bar, line, donut, and radar charts",
-        "Responsive, modern UI built with Tailwind CSS and Nuxt 3",
+        "Transforms questions into structured chart data",
+        "Supports bar, pie, line, donut, radar charts",
+        "AI-powered data parsing with GPT",
+        "Responsive UI with Tailwind CSS",
       ],
     },
   ],

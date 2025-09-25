@@ -4,38 +4,45 @@ export default function AboutMe() {
       <h2 className="text-4xl font-bold mb-6 text-center">👋 About Me</h2>
       <div className="space-y-6 text-lg leading-relaxed">
         <p>
-          Hi, I&apos;m <strong>Anass Lebkhaiti</strong> — a passionate frontend developer from
-          <strong> El Jadida, Morocco</strong>, focused on crafting modern, performant web apps using
-          <strong> Next.js</strong>, <strong>Vue.js</strong>, <strong>NuxtJS</strong>, and <strong>React</strong>.
+          Hi, I&apos;m <strong>Anass Lebkhaiti</strong> — a frontend developer from 
+          <strong> El Jadida, Morocco</strong>, passionate about building 
+          <strong> fast, scalable, and conversion-driven applications</strong> for web and mobile.
         </p>
 
         <p>
-          I thrive on building — I <strong>ship projects daily</strong> to stay sharp, explore new tools, and solve real
-          problems. From sleek UI components to full-stack features, I turn ideas into web experiences that scale.
+          Over the last 4+ years, I&apos;ve worked on everything from sleek UI components to 
+          <strong> full-stack, AI-powered apps</strong>. At 
+          <strong> Parkos B.V.</strong>, I optimized <strong>Core Web Vitals</strong>, implemented 
+          <strong> CRO experiments, SEO strategies,</strong> and shipped production-grade features that 
+          directly improved performance and user experience.
         </p>
 
         <p>
-          My journey includes working remotely with global teams like <strong>Parkos B.V.</strong>, where I contributed
-          to production-grade applications using <strong>Vue.js</strong> and <strong>Nuxt 3</strong>. Lately, I&apos;ve been
-          doubling down on <strong>Next.js</strong>, combining it with <strong>TypeScript</strong>, <strong>Firebase</strong>,
-          and <strong>GraphQL</strong> to build powerful full-stack apps.
+          My toolkit spans <strong>React.js, Next.js, Vue.js, Nuxt 3, React Native, Expo, and TypeScript, Javascript, HTML5, CSS3, Node.js</strong>. 
+          I design clean, reusable components with <strong>Tailwind CSS</strong>, manage scalable state with 
+          <strong> Zustand</strong>, <strong>Penia</strong>, <strong>Vuex</strong> and <strong>TanStack Query</strong>, and architect secure backends using 
+          <strong> Node.js (ExpressJs), Firebase, Supabase, and Python(Flask)</strong>.
+        </p>
+
+        <p>
+          I also integrate <strong>AI & machine learning</strong> into real-world apps — from 
+          <strong> NLP and OCR </strong> to <strong> speech recognition, Gemini Nano Banana API,</strong> and 
+          <strong> OpenAI</strong> — powering projects like <strong>Tahaqaaq</strong> (AI Hadith verification app), 
+          <strong>Retro</strong> (AI workflows), and <strong>TaskTastic Kids</strong> (gamified productivity for children).
         </p>
 
         <ul className="list-disc pl-6 space-y-1">
-          <li>⚡ Fast, SEO-optimized apps with the <strong>Next.js App Router</strong></li>
-          <li>🔁 Scalable state with <strong>Context API</strong>, <strong>Zustand</strong>, and custom hooks</li>
-          <li>🧩 Clean, reusable components powered by <strong>TypeScript</strong> and <strong>Tailwind CSS</strong></li>
-          <li>🚀 Performance-first approach: SSR, lazy loading, caching, and image optimization</li>
-          <li>📊 Data flow with <strong>GraphQL</strong>, <strong>Firebase</strong>, and <strong>Supabase</strong></li>
+          <li>⚡ <strong>Performance-first</strong>: Core Web Vitals, SSR, caching, lazy loading, image optimization</li>
+          <li>📈 <strong>CRO & SEO impact</strong>: A/B testing, UX optimization, technical SEO</li>
+          <li>🔁 <strong>Scalable architectures</strong> with Zustand, TanStack Query, and Penia</li>
+          <li>🧩 <strong>Reusable, type-safe components</strong> with TypeScript & Tailwind CSS</li>
+          <li>🌍 <strong>Cross-platform development</strong>: Web, mobile</li>
         </ul>
 
         <p>
-          Right now, I&apos;m building <strong>Bayān</strong> (Arabic AI-enhanced prompts), <strong>ChartMind</strong> (ask & visualize),
-          and a new experimental app — each using a different stack to push my limits and learn by doing.
-        </p>
-
-        <p>
-          If you value clean code, fast execution, and thoughtful design, we&apos;re probably on the same page. Let&apos;s connect. 🚀
+          I thrive on <strong>shipping projects daily</strong>, exploring new tools, and solving problems with clean, 
+          efficient code. If you value performance, scalability, and real-world business impact, 
+          let&apos;s connect. 🚀
         </p>
       </div>
     </section>

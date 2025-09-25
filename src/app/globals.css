@@ -73,27 +73,6 @@ html {
   display: inline-block;
 }
 
-.hero h1::before,
-.hero h1::after {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.8;
-}
-
-.hero h1::before {
-  color: #ff7eb9;
-  animation: glitch-before 2s infinite alternate;
-}
-
-.hero h1::after {
-  color: #6e8efb;
-  animation: glitch-after 2s infinite alternate;
-}
-
 @keyframes glitch-before {
   0% {
     transform: translateX(-2px) translateY(1px);
@@ -129,11 +108,6 @@ html {
   display: inline-block;
   overflow: hidden;
   white-space: nowrap;
-}
-
-.text-wrapper::after {
-  content: "|";
-  animation: blink-caret 0.75s step-end infinite;
 }
 
 @keyframes blink-caret {
@@ -188,20 +162,6 @@ html {
   height: 250px;
 }
 
-.custom-shape::before {
-  content: "<code>";
-  /* Replace with a coding-related emoji or icon */
-  position: absolute;
-  top: 20%;
-  /* Adjust position to place it at the top */
-  left: 30%;
-  transform: translateX(-50%);
-  font-size: 2rem;
-  /* Adjust size as needed */
-  color: #ffffff;
-  padding: 0.5rem;
-  border-radius: 50%;
-}
 
 @keyframes frame-movement {
   0% {
@@ -285,27 +245,6 @@ html {
   75% {
     transform: translateY(20px) rotate(-5deg);
   }
-}
-
-.animated-background::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background:
-    /* Vue.js color */
-    linear-gradient(45deg,
-      rgba(65, 184, 131, 0.05) 0%,
-      transparent 25%,
-      /* React.js color */
-      rgba(97, 218, 251, 0.05) 50%,
-      transparent 75%,
-      /* JavaScript color */
-      rgba(247, 223, 30, 0.05) 100%);
-  animation: subtleGradientAnimation 20s ease infinite;
-  opacity: 0.1;
 }
 
 @keyframes subtleGradientAnimation {

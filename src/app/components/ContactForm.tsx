@@ -93,13 +93,6 @@ export default function ContactForm() {
     }
   };
 
-  const handleMailtoSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const subject = encodeURIComponent(`Message from ${formData.name}`);
-    const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`);
-    window.location.href = `mailto:your-email@example.com?subject=${subject}&body=${body}`;
-  };
-
   return (
     <div className="max-w-3xl mx-auto px-4 py-12 relative z-50">
       <div className="text-center mb-12">

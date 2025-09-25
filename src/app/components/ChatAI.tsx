@@ -46,13 +46,16 @@ export default function ChatAI() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
-  const messagesEndRef = useRef<HTMLDivElement>(null);
+  // Ref for the scrollable chat container
+  const chatContainerRef = useRef<HTMLDivElement>(null);
 
-  const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
-
-  useEffect(scrollToBottom, [messages]);
+  // Scroll only the chat area, not the whole page
+  useEffect(() => {
+    const container = chatContainerRef.current;
+    if (container) {
+      container.scrollTop = container.scrollHeight;
+    }
+  }, [messages]);
 
   const formatHistoryForApi = (history: Message[]): Content[] => {
     return history.map(msg => ({
@@ -101,12 +104,19 @@ export default function ChatAI() {
   };
 
   return (
-    <div className="flex flex-col h-[600px] w-full max-w-96 bg-[#1a2c44] rounded-lg shadow-sm border border-gray-100">
+    <div
+      className="flex flex-col h-[600px] w-full max-w-96 bg-[#1a2c44] rounded-lg shadow-sm border border-gray-100"
+      tabIndex={-1} // Prevent auto-focus on mount
+      style={{ outline: 'none' }}
+    >
       <div className="p-4 border-b border-gray-100">
         <h2 className="text-lg font-semibold text-white">Chat with Anass.AI</h2>
       </div>
       
-      <div className="flex-grow overflow-y-auto p-4 space-y-4">
+      <div
+        className="flex-grow overflow-y-auto p-4 space-y-4"
+        ref={chatContainerRef}
+      >
         {messages.length === 0 ? (
           <div className="flex items-center justify-center h-full text-gray-200">
             Start a conversation with Anass.AI
@@ -145,7 +155,7 @@ export default function ChatAI() {
             </div>
           </div>
         )}
-        <div ref={messagesEndRef} />
+  {/* No need for messagesEndRef anymore */}
       </div>
 
       {error && (

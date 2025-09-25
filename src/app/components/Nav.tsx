@@ -30,8 +30,24 @@ export default function Nav() {
                 </button>
             </div>
             <ul className={`flex-col md:flex-row items-center md:space-x-4 space-y-2 md:space-y-0 md:flex transition-all duration-300 ease-in-out lg:min-w-1/2 lg:justify-center ${isMenuOpen ? "max-h-screen h-screen opacity-100 mt-4" : "max-h-0 opacity-0 md:opacity-100"}`}>
-                <li className="text-2xl py-2.5 lg:text-xl"><Link href="/about" className="hover:text-gray-400">About</Link></li>
-                <li className="text-2xl py-2.5 lg:text-xl"><Link href="/contact" className="hover:text-gray-400">Contact</Link></li>
+                                <li className="text-2xl py-2.5 lg:text-xl">
+                                    <Link 
+                                        href="/about" 
+                                        className="hover:text-gray-400"
+                                        onClick={() => setIsMenuOpen(false)}
+                                    >
+                                        About
+                                    </Link>
+                                </li>
+                                <li className="text-2xl py-2.5 lg:text-xl">
+                                    <Link 
+                                        href="/contact" 
+                                        className="hover:text-gray-400"
+                                        onClick={() => setIsMenuOpen(false)}
+                                    >
+                                        Contact
+                                    </Link>
+                                </li>
             </ul>
         </nav>
         </div>

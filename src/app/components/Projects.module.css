@@ -24,10 +24,3 @@
     position: relative;
     padding-left: 1.5rem;
 }
-
-.featureList li::before {
-    content: "•";
-    position: absolute;
-    left: 0;
-    color: #3b82f6;
-}

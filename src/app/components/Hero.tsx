@@ -7,8 +7,15 @@ import Link from 'next/link';
 
 export default function Hero() {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
-  const texts = ["Frontend Developer", "Problem Solver", "Creative Thinker","Vibe coder", "Lifelong Learner", "Pixel Perfectionist"];
-  
+  const texts = [
+ "Frontend Developer",
+ "Performance Optimizer",
+ "CRO & SEO Specialist",
+ "Core Web Vitals Expert",
+ "Creative Thinker",
+ "Pixel Perfectionist",
+ "Lifelong Learner"
+]
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentTextIndex((prevIndex) => (prevIndex + 1) % texts.length);
@@ -44,9 +51,9 @@ export default function Hero() {
                   </span>
                 </span>
               </h2>
-              <p className='mb-6'>Crafting clean, responsive, and performant web applications.</p>
+              <p className='mb-6'>Crafting fast, scalable, and SEO-friendly web applications.</p>
               <Link href="/contact" className="cta-button relative z-50 cursor-pointer">
-                Get in Touch
+                Let’s Work Together 🚀
               </Link>
             </div>
             <div className="image-content w-screen md:w-1/5 relative order-first md:order-last">
